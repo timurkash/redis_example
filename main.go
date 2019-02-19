@@ -12,14 +12,14 @@ import (
 )
 
 var (
-	brokerList        = kingpin.Flag("brokerList", "List of brokers to connect").Default("localhost:9092").Strings()
-	topic             = kingpin.Flag("topic", "Topic name").Default("fromKafka").String()
-	partition         = kingpin.Flag("partition", "Partition number").Default("0").String()
-	offsetType        = kingpin.Flag("offsetType", "Offset Type (OffsetNewest | OffsetOldest)").Default("-1").Int()
-	messageCountStart = kingpin.Flag("messageCountStart", "Message counter start from:").Int()
+	brokerList			= kingpin.Flag("brokerList", "List of brokers to connect").Default("localhost:9092").Strings()
+	topic				= kingpin.Flag("topic", "Topic name").Default("fromKafka").String()
+	partition			= kingpin.Flag("partition", "Partition number").Default("0").String()
+	offsetType			= kingpin.Flag("offsetType", "Offset Type (OffsetNewest | OffsetOldest)").Default("-1").Int()
+	messageCountStart	= kingpin.Flag("messageCountStart", "Message counter start from:").Int()
 
-	redisAddr		  = kingpin.Flag("redisAddr", "RedisAddress:").Default("localhost:6379").String()
-	listKey		  = kingpin.Flag("listKey", "Key of list:").Default("fromKafka").String()
+	redisAddr			= kingpin.Flag("redisAddr", "RedisAddress:").Default("localhost:6379").String()
+	listKey				= kingpin.Flag("listKey", "Key of list:").Default("fromKafka").String()
 )
 
 func main() {
