@@ -19,7 +19,7 @@ var (
 	messageCountStart = kingpin.Flag("messageCountStart", "Message counter start from:").Int()
 
 	redisAddr		  = kingpin.Flag("redisAddr", "RedisAddress:").Default("localhost:6379").String()
-	listKey		  = kingpin.Flag("redisAddr", "Key of list:").Default("fromKafka").String()
+	listKey		  = kingpin.Flag("listKey", "Key of list:").Default("fromKafka").String()
 )
 
 func main() {
